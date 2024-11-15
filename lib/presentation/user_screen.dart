@@ -110,6 +110,8 @@ import 'package:interviewtask/Bloc/fatch_user_state.dart';
 import 'user_detail_screen.dart';
 
 class UserListScreen extends StatelessWidget {
+  const UserListScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
@@ -118,7 +120,7 @@ class UserListScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         appBar: AppBar(
           backgroundColor: Colors.white,
-          title: Text('User List'),
+          title: const Text('User List'),
         ),
         body: UserListBody(),
       ),
@@ -129,6 +131,8 @@ class UserListScreen extends StatelessWidget {
 class UserListBody extends StatelessWidget {
   final TextEditingController _searchController = TextEditingController();
 
+  UserListBody({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -137,7 +141,7 @@ class UserListBody extends StatelessWidget {
           padding: const EdgeInsets.all(8.0),
           child: TextField(
             controller: _searchController,
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
               labelText: 'Search by name',
               prefixIcon: Icon(Icons.search),
               border: OutlineInputBorder(),
@@ -151,7 +155,7 @@ class UserListBody extends StatelessWidget {
           child: BlocBuilder<UserBloc, UserState>(
             builder: (context, state) {
               if (state is UserLoading) {
-                return Center(child: CircularProgressIndicator());
+                return const Center(child: CircularProgressIndicator());
               } else if (state is UserLoaded) {
                 return RefreshIndicator(
                   onRefresh: () async {
@@ -189,13 +193,13 @@ class UserListBody extends StatelessWidget {
                         onPressed: () {
                           context.read<UserBloc>().add(LoadUsers());
                         },
-                        child: Text('Retry'),
+                        child: const Text('Retry'),
                       ),
                     ],
                   ),
                 );
               } else {
-                return Center(child: Text('No users found.'));
+                return const Center(child: Text('No users found.'));
               }
             },
           ),
