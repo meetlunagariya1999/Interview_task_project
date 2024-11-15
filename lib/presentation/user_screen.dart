@@ -17,6 +17,7 @@ class UserListScreen extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
+          centerTitle: true,
           backgroundColor: Colors.white,
           title: const Text('User List'),
         ),
