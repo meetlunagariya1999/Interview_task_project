@@ -1,16 +1,24 @@
 # interviewtask
 
-A new Flutter project.
 
-## Getting Started
+-- Overview
+The User List App is a feature-rich Flutter application designed to fetch and display a list of users from a public API. The app integrates core functionalities like real-time search, user detail navigation, and robust error handling, all while adhering to clean architectural principles with BLoC State Management.
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Features at a Glance
+1. User Listing
+Displays a neatly formatted list of user names and email addresses.
+Fetches user data dynamically from the API.
+2. Search Functionality
+Users can filter the list by typing a name in the search bar.
+Search updates in real-time and is case-insensitive.
+3. User Details
+Tap on a user to navigate to their detailed profile page.
+Detailed information includes username, email, phone, and website.
+4. Pull-to-Refresh
+Swipe down to refresh the user list and fetch the latest data.
+5. Error Handling
+If an API request fails, the app displays an error message.
+Includes a Retry button for instant reloading.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
